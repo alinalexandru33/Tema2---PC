@@ -5,8 +5,8 @@ Task1.c:1:  Include the directory when naming header files  [build/include_subdi
 Task1.c:144:  Consider using strtok_r(...) instead of strtok(...) for improved thread safety.  [runtime/threadsafe_fn] [2]
 Task1.c:154:  Consider using strtok_r(...) instead of strtok(...) for improved thread safety.  [runtime/threadsafe_fn] [2]
 Task2.c:1:  Include the directory when naming header files  [build/include_subdir] [4]
-Task2.c:4:  Missing username in TODO; it should look like "// TODO(my_username): Stuff."  [readability/todo] [2]
-Task2.c:6:  Could not find a newline character at the end of the file.  [whitespace/ending_newline] [5]
+Task2.c:23:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+Task2.c:54:  Could not find a newline character at the end of the file.  [whitespace/ending_newline] [5]
 Task3.c:1:  Include the directory when naming header files  [build/include_subdir] [4]
 Task3.c:4:  Missing username in TODO; it should look like "// TODO(my_username): Stuff."  [readability/todo] [2]
 Task3.c:5:  Could not find a newline character at the end of the file.  [whitespace/ending_newline] [5]
@@ -21,9 +21,9 @@ Total errors found: 11
 Run clang-tidy-12
 
 35 warnings generated.
-49 warnings generated.
-63 warnings generated.
-77 warnings generated.
+70 warnings generated.
+84 warnings generated.
+98 warnings generated.
 /home/student/Desktop/Tema2---PC/Task1.c:5:9: warning: variable 'aux' is not initialized [cppcoreguidelines-init-variables]
     int aux, reverese = 0;
         ^
@@ -99,5 +99,73 @@ Run clang-tidy-12
     char *p;
           ^
             = NULL
+/home/student/Desktop/Tema2---PC/Task2.c:5:9: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
+    int i;
+        ^
+          = 0
+/home/student/Desktop/Tema2---PC/Task2.c:11:17: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+            S = rightMargin;
+                ^
+/home/student/Desktop/Tema2---PC/Task2.c:19:27: warning: 100 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+void caesar(int K, char S[100]) {
+                          ^
+/home/student/Desktop/Tema2---PC/Task2.c:20:9: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
+    int i, leftMargin, rightMargin;
+        ^
+          = 0
+/home/student/Desktop/Tema2---PC/Task2.c:20:12: warning: variable 'leftMargin' is not initialized [cppcoreguidelines-init-variables]
+    int i, leftMargin, rightMargin;
+           ^
+                      = 0
+/home/student/Desktop/Tema2---PC/Task2.c:20:24: warning: variable 'rightMargin' is not initialized [cppcoreguidelines-init-variables]
+    int i, leftMargin, rightMargin;
+                       ^
+                                   = 0
+/home/student/Desktop/Tema2---PC/Task2.c:25:21: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        if (S[i] >= 48 && S[i] <= 57) {
+                    ^
+/home/student/Desktop/Tema2---PC/Task2.c:25:35: warning: 57 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        if (S[i] >= 48 && S[i] <= 57) {
+                                  ^
+/home/student/Desktop/Tema2---PC/Task2.c:26:26: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+            leftMargin = 48; rightMargin = 57;
+                         ^
+/home/student/Desktop/Tema2---PC/Task2.c:26:44: warning: 57 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+            leftMargin = 48; rightMargin = 57;
+                                           ^
+/home/student/Desktop/Tema2---PC/Task2.c:29:28: warning: 65 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        } else if (S[i] >= 65 && S[i] <= 90) {
+                           ^
+/home/student/Desktop/Tema2---PC/Task2.c:29:42: warning: 90 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        } else if (S[i] >= 65 && S[i] <= 90) {
+                                         ^
+/home/student/Desktop/Tema2---PC/Task2.c:30:26: warning: 65 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+            leftMargin = 65; rightMargin = 90;
+                         ^
+/home/student/Desktop/Tema2---PC/Task2.c:30:44: warning: 90 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+            leftMargin = 65; rightMargin = 90;
+                                           ^
+/home/student/Desktop/Tema2---PC/Task2.c:33:28: warning: 97 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        } else if (S[i] >= 97 && S[i] <= 122) {
+                           ^
+/home/student/Desktop/Tema2---PC/Task2.c:33:42: warning: 122 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        } else if (S[i] >= 97 && S[i] <= 122) {
+                                         ^
+/home/student/Desktop/Tema2---PC/Task2.c:34:26: warning: 97 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+            leftMargin = 97; rightMargin = 122;
+                         ^
+/home/student/Desktop/Tema2---PC/Task2.c:34:44: warning: 122 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+            leftMargin = 97; rightMargin = 122;
+                                           ^
+/home/student/Desktop/Tema2---PC/Task2.c:42:9: warning: variable 'K' is not initialized [cppcoreguidelines-init-variables]
+    int K;
+        ^
+          = 0
+/home/student/Desktop/Tema2---PC/Task2.c:43:12: warning: 100 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+    char S[100], method[10];
+           ^
+/home/student/Desktop/Tema2---PC/Task2.c:43:25: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+    char S[100], method[10];
+                        ^
 Suppressed 56 warnings (56 in non-user code).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
