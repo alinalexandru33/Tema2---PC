@@ -1,8 +1,103 @@
 
 Run cpplint
 
-./check.sh: line 115: cpplint: command not found
+Task1.c:1:  Include the directory when naming header files  [build/include_subdir] [4]
+Task1.c:144:  Consider using strtok_r(...) instead of strtok(...) for improved thread safety.  [runtime/threadsafe_fn] [2]
+Task1.c:154:  Consider using strtok_r(...) instead of strtok(...) for improved thread safety.  [runtime/threadsafe_fn] [2]
+Task2.c:1:  Include the directory when naming header files  [build/include_subdir] [4]
+Task2.c:4:  Missing username in TODO; it should look like "// TODO(my_username): Stuff."  [readability/todo] [2]
+Task2.c:6:  Could not find a newline character at the end of the file.  [whitespace/ending_newline] [5]
+Task3.c:1:  Include the directory when naming header files  [build/include_subdir] [4]
+Task3.c:4:  Missing username in TODO; it should look like "// TODO(my_username): Stuff."  [readability/todo] [2]
+Task3.c:5:  Could not find a newline character at the end of the file.  [whitespace/ending_newline] [5]
+tema2.c:1:  Include the directory when naming header files  [build/include_subdir] [4]
+tema2.c:4:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+Done processing Task1.c
+Done processing Task2.c
+Done processing Task3.c
+Done processing tema2.c
+Total errors found: 11
 
 Run clang-tidy-12
 
-./check.sh: line 121: clang-tidy-12: command not found
+35 warnings generated.
+49 warnings generated.
+63 warnings generated.
+77 warnings generated.
+/home/student/Desktop/Tema2---PC/Task1.c:5:9: warning: variable 'aux' is not initialized [cppcoreguidelines-init-variables]
+    int aux, reverese = 0;
+        ^
+            = 0
+/home/student/Desktop/Tema2---PC/Task1.c:9:31: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        reverese = reverese * 10 + aux % 10;
+                              ^
+/home/student/Desktop/Tema2---PC/Task1.c:9:42: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        reverese = reverese * 10 + aux % 10;
+                                         ^
+/home/student/Desktop/Tema2---PC/Task1.c:10:16: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        aux /= 10;
+               ^
+/home/student/Desktop/Tema2---PC/Task1.c:34:9: warning: variable 'k' is not initialized [cppcoreguidelines-init-variables]
+    int k, idx;
+        ^
+          = 0
+/home/student/Desktop/Tema2---PC/Task1.c:34:12: warning: variable 'idx' is not initialized [cppcoreguidelines-init-variables]
+    int k, idx;
+           ^
+               = 0
+/home/student/Desktop/Tema2---PC/Task1.c:37:21: warning: 5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+    for (k = 1; k < 5; k++) {
+                    ^
+/home/student/Desktop/Tema2---PC/Task1.c:71:9: warning: variable 'K' is not initialized [cppcoreguidelines-init-variables]
+    int K, X;
+        ^
+          = 0
+/home/student/Desktop/Tema2---PC/Task1.c:71:12: warning: variable 'X' is not initialized [cppcoreguidelines-init-variables]
+    int K, X;
+           ^
+             = 0
+/home/student/Desktop/Tema2---PC/Task1.c:74:13: warning: 100 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+    X = K % 100;
+            ^
+/home/student/Desktop/Tema2---PC/Task1.c:95:9: warning: variable 'nr' is not initialized [cppcoreguidelines-init-variables]
+    int nr, idx = 0, n, k, S = 0, r;
+        ^
+           = 0
+/home/student/Desktop/Tema2---PC/Task1.c:95:22: warning: variable 'n' is not initialized [cppcoreguidelines-init-variables]
+    int nr, idx = 0, n, k, S = 0, r;
+                     ^
+                       = 0
+/home/student/Desktop/Tema2---PC/Task1.c:95:25: warning: variable 'k' is not initialized [cppcoreguidelines-init-variables]
+    int nr, idx = 0, n, k, S = 0, r;
+                        ^
+                          = 0
+/home/student/Desktop/Tema2---PC/Task1.c:95:35: warning: variable 'r' is not initialized [cppcoreguidelines-init-variables]
+    int nr, idx = 0, n, k, S = 0, r;
+                                  ^
+                                    = 0
+/home/student/Desktop/Tema2---PC/Task1.c:97:16: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+    n = p[1] - 48;
+               ^
+/home/student/Desktop/Tema2---PC/Task1.c:98:16: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+    k = p[2] - 48;
+               ^
+/home/student/Desktop/Tema2---PC/Task1.c:102:37: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+            S += p[3 + (idx % n)] - 48;
+                                    ^
+/home/student/Desktop/Tema2---PC/Task1.c:104:31: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+            S += p[3 + idx] - 48;
+                              ^
+/home/student/Desktop/Tema2---PC/Task1.c:136:35: warning: variable 'N' is not initialized [cppcoreguidelines-init-variables]
+    int moveNr = 1, i = 0, j = 0, N, M, mat[MAX_LENGTH][MAX_LENGTH];
+                                  ^
+                                    = 0
+/home/student/Desktop/Tema2---PC/Task1.c:136:38: warning: variable 'M' is not initialized [cppcoreguidelines-init-variables]
+    int moveNr = 1, i = 0, j = 0, N, M, mat[MAX_LENGTH][MAX_LENGTH];
+                                     ^
+                                       = 0
+/home/student/Desktop/Tema2---PC/Task1.c:138:11: warning: variable 'p' is not initialized [cppcoreguidelines-init-variables]
+    char *p;
+          ^
+            = NULL
+Suppressed 56 warnings (56 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
