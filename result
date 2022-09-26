@@ -24,24 +24,34 @@ Task2.c:148:  Line ends in whitespace.  Consider deleting these extra spaces.  [
 Task2.c:156:  Almost always, snprintf is better than strcpy  [runtime/printf] [4]
 Task2.c:158:  Almost always, snprintf is better than strcat  [runtime/printf] [4]
 Task2.c:172:  Almost always, snprintf is better than strcpy  [runtime/printf] [4]
-Task2.c:176:  Could not find a newline character at the end of the file.  [whitespace/ending_newline] [5]
 Task3.c:1:  Include the directory when naming header files  [build/include_subdir] [4]
-Task3.c:4:  Missing username in TODO; it should look like "// TODO(my_username): Stuff."  [readability/todo] [2]
-Task3.c:5:  Could not find a newline character at the end of the file.  [whitespace/ending_newline] [5]
+Task3.c:31:  Almost always, snprintf is better than strcat  [runtime/printf] [4]
+Task3.c:32:  Almost always, snprintf is better than strcat  [runtime/printf] [4]
+Task3.c:37:  Almost always, snprintf is better than strcat  [runtime/printf] [4]
+Task3.c:39:  Missing space before ( in while(  [whitespace/parens] [5]
+Task3.c:40:  Almost always, snprintf is better than strcat  [runtime/printf] [4]
+Task3.c:41:  Almost always, snprintf is better than strcat  [runtime/printf] [4]
+Task3.c:44:  Almost always, snprintf is better than strcat  [runtime/printf] [4]
+Task3.c:47:  Almost always, snprintf is better than strcpy  [runtime/printf] [4]
+Task3.c:53:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+Task3.c:73:  Almost always, snprintf is better than strcpy  [runtime/printf] [4]
+Task3.c:74:  Almost always, snprintf is better than strcat  [runtime/printf] [4]
+Task3.c:75:  Never use sprintf. Use snprintf instead.  [runtime/printf] [5]
+Task3.c:76:  Almost always, snprintf is better than strcat  [runtime/printf] [4]
 tema2.c:1:  Include the directory when naming header files  [build/include_subdir] [4]
 tema2.c:4:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
 Done processing Task1.c
 Done processing Task2.c
 Done processing Task3.c
 Done processing tema2.c
-Total errors found: 29
+Total errors found: 39
 
 Run clang-tidy-12
 
 35 warnings generated.
-76 warnings generated.
-90 warnings generated.
-104 warnings generated.
+75 warnings generated.
+98 warnings generated.
+112 warnings generated.
 /home/student/Desktop/Tema2---PC/Task1.c:5:9: warning: variable 'aux' is not initialized [cppcoreguidelines-init-variables]
     int aux, reverese = 0;
         ^
@@ -132,54 +142,50 @@ Run clang-tidy-12
         str[len - i - 1] = aux;
                            ^
 /home/student/Desktop/Tema2---PC/Task2.c:28:9: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
-    int i, idx = 0, n1, n2, diff, carry, s;
+    int i, idx = 0, n1, n2, diff, carry = 0, s;
         ^
           = 0
 /home/student/Desktop/Tema2---PC/Task2.c:28:21: warning: variable 'n1' is not initialized [cppcoreguidelines-init-variables]
-    int i, idx = 0, n1, n2, diff, carry, s;
+    int i, idx = 0, n1, n2, diff, carry = 0, s;
                     ^
                        = 0
 /home/student/Desktop/Tema2---PC/Task2.c:28:25: warning: variable 'n2' is not initialized [cppcoreguidelines-init-variables]
-    int i, idx = 0, n1, n2, diff, carry, s;
+    int i, idx = 0, n1, n2, diff, carry = 0, s;
                         ^
                            = 0
 /home/student/Desktop/Tema2---PC/Task2.c:28:29: warning: variable 'diff' is not initialized [cppcoreguidelines-init-variables]
-    int i, idx = 0, n1, n2, diff, carry, s;
+    int i, idx = 0, n1, n2, diff, carry = 0, s;
                             ^
                                  = 0
-/home/student/Desktop/Tema2---PC/Task2.c:28:35: warning: variable 'carry' is not initialized [cppcoreguidelines-init-variables]
-    int i, idx = 0, n1, n2, diff, carry, s;
-                                  ^
-                                        = 0
-/home/student/Desktop/Tema2---PC/Task2.c:28:42: warning: variable 's' is not initialized [cppcoreguidelines-init-variables]
-    int i, idx = 0, n1, n2, diff, carry, s;
-                                         ^
-                                           = 0
+/home/student/Desktop/Tema2---PC/Task2.c:28:46: warning: variable 's' is not initialized [cppcoreguidelines-init-variables]
+    int i, idx = 0, n1, n2, diff, carry = 0, s;
+                                             ^
+                                               = 0
 /home/student/Desktop/Tema2---PC/Task2.c:35:10: warning: narrowing conversion from 'unsigned long' to signed type 'int' is implementation-defined [cppcoreguidelines-narrowing-conversions]
     n1 = strlen(N1); n2 = strlen(N2);
          ^
 /home/student/Desktop/Tema2---PC/Task2.c:35:27: warning: narrowing conversion from 'unsigned long' to signed type 'int' is implementation-defined [cppcoreguidelines-narrowing-conversions]
     n1 = strlen(N1); n2 = strlen(N2);
                           ^
-/home/student/Desktop/Tema2---PC/Task2.c:42:20: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+/home/student/Desktop/Tema2---PC/Task2.c:41:20: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [cppcoreguidelines-narrowing-conversions]
         ret[idx] = s % 10 + '0';
                    ^
-/home/student/Desktop/Tema2---PC/Task2.c:42:24: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+/home/student/Desktop/Tema2---PC/Task2.c:41:24: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
         ret[idx] = s % 10 + '0';
                        ^
-/home/student/Desktop/Tema2---PC/Task2.c:45:21: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+/home/student/Desktop/Tema2---PC/Task2.c:44:21: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
         carry = s / 10;
                     ^
-/home/student/Desktop/Tema2---PC/Task2.c:51:20: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+/home/student/Desktop/Tema2---PC/Task2.c:50:20: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [cppcoreguidelines-narrowing-conversions]
         ret[idx] = s % 10 + '0';
                    ^
-/home/student/Desktop/Tema2---PC/Task2.c:51:24: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+/home/student/Desktop/Tema2---PC/Task2.c:50:24: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
         ret[idx] = s % 10 + '0';
                        ^
-/home/student/Desktop/Tema2---PC/Task2.c:54:21: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+/home/student/Desktop/Tema2---PC/Task2.c:53:21: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
         carry = s / 10;
                     ^
-/home/student/Desktop/Tema2---PC/Task2.c:59:20: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+/home/student/Desktop/Tema2---PC/Task2.c:58:20: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [cppcoreguidelines-narrowing-conversions]
         ret[idx] = carry + '0';
                    ^
 /home/student/Desktop/Tema2---PC/Task2.c:75:9: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
@@ -213,5 +219,39 @@ Run clang-tidy-12
     int i, j = 0, leftMargin, rightMargin;
                               ^
                                           = 0
+/home/student/Desktop/Tema2---PC/Task3.c:13:12: warning: variable 'text' is not initialized [cppcoreguidelines-init-variables]
+    char **text, **ret, word[100], aux[100];
+           ^
+                = NULL
+/home/student/Desktop/Tema2---PC/Task3.c:13:20: warning: variable 'ret' is not initialized [cppcoreguidelines-init-variables]
+    char **text, **ret, word[100], aux[100];
+                   ^
+                       = NULL
+/home/student/Desktop/Tema2---PC/Task3.c:13:30: warning: 100 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+    char **text, **ret, word[100], aux[100];
+                             ^
+/home/student/Desktop/Tema2---PC/Task3.c:13:40: warning: 100 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+    char **text, **ret, word[100], aux[100];
+                                       ^
+/home/student/Desktop/Tema2---PC/Task3.c:14:9: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
+    int i, j, k, size = 1, nr = 0, count, OK;
+        ^
+          = 0
+/home/student/Desktop/Tema2---PC/Task3.c:14:12: warning: variable 'j' is not initialized [cppcoreguidelines-init-variables]
+    int i, j, k, size = 1, nr = 0, count, OK;
+           ^
+             = 0
+/home/student/Desktop/Tema2---PC/Task3.c:14:15: warning: variable 'k' is not initialized [cppcoreguidelines-init-variables]
+    int i, j, k, size = 1, nr = 0, count, OK;
+              ^
+                = 0
+/home/student/Desktop/Tema2---PC/Task3.c:14:36: warning: variable 'count' is not initialized [cppcoreguidelines-init-variables]
+    int i, j, k, size = 1, nr = 0, count, OK;
+                                   ^
+                                         = 0
+/home/student/Desktop/Tema2---PC/Task3.c:14:43: warning: variable 'OK' is not initialized [cppcoreguidelines-init-variables]
+    int i, j, k, size = 1, nr = 0, count, OK;
+                                          ^
+                                             = 0
 Suppressed 56 warnings (56 in non-user code).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

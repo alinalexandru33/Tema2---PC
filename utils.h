@@ -21,6 +21,9 @@ char rotate(char S, int leftMargin, int rightMargin, int K);
 void caesar(int K, char S[MAX_LENGTH]);
 void vigenere(char K[MAX_LENGTH], char S[MAX_LENGTH], char extendedKey[MAX_LENGTH]);
 
+/* Task 3 */
+void format(char *c);
+
 /* Main */
 void SolveTask1();
 void SolveTask2();

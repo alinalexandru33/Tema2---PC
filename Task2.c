@@ -25,7 +25,7 @@ void reverse(char *str) {
 /* Function that computes the sum of two big numbers */
 char* sum(char N1[MAX_LENGTH], char N2[MAX_LENGTH]) {
     char *ret = calloc(MAX_LENGTH, sizeof(char));
-    int i, idx = 0, n1, n2, diff, carry, s;
+    int i, idx = 0, n1, n2, diff, carry = 0, s;
 
     /* Make the second number the longest */
     if (strlen(N1) > strlen(N2)) {
@@ -34,7 +34,6 @@ char* sum(char N1[MAX_LENGTH], char N2[MAX_LENGTH]) {
 
     n1 = strlen(N1); n2 = strlen(N2);
     diff = n2 - n1;
-    carry = 0;
 
     /* Sum for the same length */
     for (i = n1 - 1; i >= 0; i--) {
@@ -59,7 +58,8 @@ char* sum(char N1[MAX_LENGTH], char N2[MAX_LENGTH]) {
         ret[idx] = carry + '0';
     }
 
-    /* We have computed the number from end to start */
+    /* We have computed the number from end to beginning
+    so we need to reverse it */
     reverse(ret);
 
     /* Delete 0's at the beginning of the number */
@@ -173,4 +173,6 @@ void SolveTask2() {
     }
 
     printf("%s\n", S);
+
+    return;
 }

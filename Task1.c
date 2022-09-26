@@ -158,4 +158,6 @@ void SolveTask1() {
         }
         printf("\n");
     }
+
+    return;
 }
