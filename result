@@ -2,18 +2,29 @@
 Run cpplint
 
 Task1.c:1:  Include the directory when naming header files  [build/include_subdir] [4]
-Task1.c:144:  Consider using strtok_r(...) instead of strtok(...) for improved thread safety.  [runtime/threadsafe_fn] [2]
-Task1.c:154:  Consider using strtok_r(...) instead of strtok(...) for improved thread safety.  [runtime/threadsafe_fn] [2]
+Task1.c:32:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Task1.c:68:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Task1.c:91:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Task1.c:141:  Consider using strtok_r(...) instead of strtok(...) for improved thread safety.  [runtime/threadsafe_fn] [2]
+Task1.c:151:  Consider using strtok_r(...) instead of strtok(...) for improved thread safety.  [runtime/threadsafe_fn] [2]
 Task2.c:1:  Include the directory when naming header files  [build/include_subdir] [4]
-Task2.c:23:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
-Task2.c:44:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
-Task2.c:48:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
-Task2.c:48:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
-Task2.c:76:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
-Task2.c:82:  Almost always, snprintf is better than strcpy  [runtime/printf] [4]
-Task2.c:84:  Almost always, snprintf is better than strcat  [runtime/printf] [4]
-Task2.c:88:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
-Task2.c:92:  Could not find a newline character at the end of the file.  [whitespace/ending_newline] [5]
+Task2.c:6:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+Task2.c:7:  Almost always, snprintf is better than strcpy  [runtime/printf] [4]
+Task2.c:8:  Almost always, snprintf is better than strcpy  [runtime/printf] [4]
+Task2.c:9:  Almost always, snprintf is better than strcpy  [runtime/printf] [4]
+Task2.c:67:  Almost always, snprintf is better than strcpy  [runtime/printf] [4]
+Task2.c:71:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+Task2.c:93:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+Task2.c:114:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Task2.c:118:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+Task2.c:118:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+Task2.c:139:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+Task2.c:139:  Missing space after ,  [whitespace/comma] [3]
+Task2.c:148:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+Task2.c:156:  Almost always, snprintf is better than strcpy  [runtime/printf] [4]
+Task2.c:158:  Almost always, snprintf is better than strcat  [runtime/printf] [4]
+Task2.c:172:  Almost always, snprintf is better than strcpy  [runtime/printf] [4]
+Task2.c:176:  Could not find a newline character at the end of the file.  [whitespace/ending_newline] [5]
 Task3.c:1:  Include the directory when naming header files  [build/include_subdir] [4]
 Task3.c:4:  Missing username in TODO; it should look like "// TODO(my_username): Stuff."  [readability/todo] [2]
 Task3.c:5:  Could not find a newline character at the end of the file.  [whitespace/ending_newline] [5]
@@ -23,14 +34,14 @@ Done processing Task1.c
 Done processing Task2.c
 Done processing Task3.c
 Done processing tema2.c
-Total errors found: 18
+Total errors found: 29
 
 Run clang-tidy-12
 
 35 warnings generated.
-83 warnings generated.
-97 warnings generated.
-111 warnings generated.
+76 warnings generated.
+90 warnings generated.
+104 warnings generated.
 /home/student/Desktop/Tema2---PC/Task1.c:5:9: warning: variable 'aux' is not initialized [cppcoreguidelines-init-variables]
     int aux, reverese = 0;
         ^
@@ -44,176 +55,163 @@ Run clang-tidy-12
 /home/student/Desktop/Tema2---PC/Task1.c:10:16: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
         aux /= 10;
                ^
-/home/student/Desktop/Tema2---PC/Task1.c:34:9: warning: variable 'k' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task1.c:33:9: warning: variable 'k' is not initialized [cppcoreguidelines-init-variables]
     int k, idx;
         ^
           = 0
-/home/student/Desktop/Tema2---PC/Task1.c:34:12: warning: variable 'idx' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task1.c:33:12: warning: variable 'idx' is not initialized [cppcoreguidelines-init-variables]
     int k, idx;
            ^
                = 0
-/home/student/Desktop/Tema2---PC/Task1.c:37:21: warning: 5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+/home/student/Desktop/Tema2---PC/Task1.c:36:21: warning: 5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
     for (k = 1; k < 5; k++) {
                     ^
-/home/student/Desktop/Tema2---PC/Task1.c:71:9: warning: variable 'K' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task1.c:69:9: warning: variable 'K' is not initialized [cppcoreguidelines-init-variables]
     int K, X;
         ^
           = 0
-/home/student/Desktop/Tema2---PC/Task1.c:71:12: warning: variable 'X' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task1.c:69:12: warning: variable 'X' is not initialized [cppcoreguidelines-init-variables]
     int K, X;
            ^
              = 0
-/home/student/Desktop/Tema2---PC/Task1.c:74:13: warning: 100 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+/home/student/Desktop/Tema2---PC/Task1.c:72:13: warning: 100 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
     X = K % 100;
             ^
-/home/student/Desktop/Tema2---PC/Task1.c:95:9: warning: variable 'nr' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task1.c:92:9: warning: variable 'nr' is not initialized [cppcoreguidelines-init-variables]
     int nr, idx = 0, n, k, S = 0, r;
         ^
            = 0
-/home/student/Desktop/Tema2---PC/Task1.c:95:22: warning: variable 'n' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task1.c:92:22: warning: variable 'n' is not initialized [cppcoreguidelines-init-variables]
     int nr, idx = 0, n, k, S = 0, r;
                      ^
                        = 0
-/home/student/Desktop/Tema2---PC/Task1.c:95:25: warning: variable 'k' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task1.c:92:25: warning: variable 'k' is not initialized [cppcoreguidelines-init-variables]
     int nr, idx = 0, n, k, S = 0, r;
                         ^
                           = 0
-/home/student/Desktop/Tema2---PC/Task1.c:95:35: warning: variable 'r' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task1.c:92:35: warning: variable 'r' is not initialized [cppcoreguidelines-init-variables]
     int nr, idx = 0, n, k, S = 0, r;
                                   ^
                                     = 0
-/home/student/Desktop/Tema2---PC/Task1.c:97:16: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+/home/student/Desktop/Tema2---PC/Task1.c:94:16: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
     n = p[1] - 48;
                ^
-/home/student/Desktop/Tema2---PC/Task1.c:98:16: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+/home/student/Desktop/Tema2---PC/Task1.c:95:16: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
     k = p[2] - 48;
                ^
-/home/student/Desktop/Tema2---PC/Task1.c:102:37: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+/home/student/Desktop/Tema2---PC/Task1.c:99:37: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
             S += p[3 + (idx % n)] - 48;
                                     ^
-/home/student/Desktop/Tema2---PC/Task1.c:104:31: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+/home/student/Desktop/Tema2---PC/Task1.c:101:31: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
             S += p[3 + idx] - 48;
                               ^
-/home/student/Desktop/Tema2---PC/Task1.c:136:35: warning: variable 'N' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task1.c:133:35: warning: variable 'N' is not initialized [cppcoreguidelines-init-variables]
     int moveNr = 1, i = 0, j = 0, N, M, mat[MAX_LENGTH][MAX_LENGTH];
                                   ^
                                     = 0
-/home/student/Desktop/Tema2---PC/Task1.c:136:38: warning: variable 'M' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task1.c:133:38: warning: variable 'M' is not initialized [cppcoreguidelines-init-variables]
     int moveNr = 1, i = 0, j = 0, N, M, mat[MAX_LENGTH][MAX_LENGTH];
                                      ^
                                        = 0
-/home/student/Desktop/Tema2---PC/Task1.c:138:11: warning: variable 'p' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task1.c:135:11: warning: variable 'p' is not initialized [cppcoreguidelines-init-variables]
     char *p;
           ^
             = NULL
-/home/student/Desktop/Tema2---PC/Task2.c:5:9: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task2.c:16:9: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
+    int i, len = strlen(str), aux;
+        ^
+          = 0
+/home/student/Desktop/Tema2---PC/Task2.c:16:18: warning: narrowing conversion from 'unsigned long' to signed type 'int' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+    int i, len = strlen(str), aux;
+                 ^
+/home/student/Desktop/Tema2---PC/Task2.c:16:31: warning: variable 'aux' is not initialized [cppcoreguidelines-init-variables]
+    int i, len = strlen(str), aux;
+                              ^
+                                  = 0
+/home/student/Desktop/Tema2---PC/Task2.c:21:28: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+        str[len - i - 1] = aux;
+                           ^
+/home/student/Desktop/Tema2---PC/Task2.c:28:9: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
+    int i, idx = 0, n1, n2, diff, carry, s;
+        ^
+          = 0
+/home/student/Desktop/Tema2---PC/Task2.c:28:21: warning: variable 'n1' is not initialized [cppcoreguidelines-init-variables]
+    int i, idx = 0, n1, n2, diff, carry, s;
+                    ^
+                       = 0
+/home/student/Desktop/Tema2---PC/Task2.c:28:25: warning: variable 'n2' is not initialized [cppcoreguidelines-init-variables]
+    int i, idx = 0, n1, n2, diff, carry, s;
+                        ^
+                           = 0
+/home/student/Desktop/Tema2---PC/Task2.c:28:29: warning: variable 'diff' is not initialized [cppcoreguidelines-init-variables]
+    int i, idx = 0, n1, n2, diff, carry, s;
+                            ^
+                                 = 0
+/home/student/Desktop/Tema2---PC/Task2.c:28:35: warning: variable 'carry' is not initialized [cppcoreguidelines-init-variables]
+    int i, idx = 0, n1, n2, diff, carry, s;
+                                  ^
+                                        = 0
+/home/student/Desktop/Tema2---PC/Task2.c:28:42: warning: variable 's' is not initialized [cppcoreguidelines-init-variables]
+    int i, idx = 0, n1, n2, diff, carry, s;
+                                         ^
+                                           = 0
+/home/student/Desktop/Tema2---PC/Task2.c:35:10: warning: narrowing conversion from 'unsigned long' to signed type 'int' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+    n1 = strlen(N1); n2 = strlen(N2);
+         ^
+/home/student/Desktop/Tema2---PC/Task2.c:35:27: warning: narrowing conversion from 'unsigned long' to signed type 'int' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+    n1 = strlen(N1); n2 = strlen(N2);
+                          ^
+/home/student/Desktop/Tema2---PC/Task2.c:42:20: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+        ret[idx] = s % 10 + '0';
+                   ^
+/home/student/Desktop/Tema2---PC/Task2.c:42:24: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        ret[idx] = s % 10 + '0';
+                       ^
+/home/student/Desktop/Tema2---PC/Task2.c:45:21: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        carry = s / 10;
+                    ^
+/home/student/Desktop/Tema2---PC/Task2.c:51:20: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+        ret[idx] = s % 10 + '0';
+                   ^
+/home/student/Desktop/Tema2---PC/Task2.c:51:24: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        ret[idx] = s % 10 + '0';
+                       ^
+/home/student/Desktop/Tema2---PC/Task2.c:54:21: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        carry = s / 10;
+                    ^
+/home/student/Desktop/Tema2---PC/Task2.c:59:20: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+        ret[idx] = carry + '0';
+                   ^
+/home/student/Desktop/Tema2---PC/Task2.c:75:9: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
     int i;
         ^
           = 0
-/home/student/Desktop/Tema2---PC/Task2.c:11:17: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+/home/student/Desktop/Tema2---PC/Task2.c:81:17: warning: narrowing conversion from 'int' to signed type 'char' is implementation-defined [cppcoreguidelines-narrowing-conversions]
             S = rightMargin;
                 ^
-/home/student/Desktop/Tema2---PC/Task2.c:20:9: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task2.c:90:9: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
     int i, leftMargin, rightMargin;
         ^
           = 0
-/home/student/Desktop/Tema2---PC/Task2.c:20:12: warning: variable 'leftMargin' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task2.c:90:12: warning: variable 'leftMargin' is not initialized [cppcoreguidelines-init-variables]
     int i, leftMargin, rightMargin;
            ^
                       = 0
-/home/student/Desktop/Tema2---PC/Task2.c:20:24: warning: variable 'rightMargin' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task2.c:90:24: warning: variable 'rightMargin' is not initialized [cppcoreguidelines-init-variables]
     int i, leftMargin, rightMargin;
                        ^
                                    = 0
-/home/student/Desktop/Tema2---PC/Task2.c:25:21: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-        if (S[i] >= 48 && S[i] <= 57) {
-                    ^
-/home/student/Desktop/Tema2---PC/Task2.c:25:35: warning: 57 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-        if (S[i] >= 48 && S[i] <= 57) {
-                                  ^
-/home/student/Desktop/Tema2---PC/Task2.c:26:26: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-            leftMargin = 48; rightMargin = 57;
-                         ^
-/home/student/Desktop/Tema2---PC/Task2.c:26:44: warning: 57 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-            leftMargin = 48; rightMargin = 57;
-                                           ^
-/home/student/Desktop/Tema2---PC/Task2.c:29:28: warning: 65 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-        } else if (S[i] >= 65 && S[i] <= 90) {
-                           ^
-/home/student/Desktop/Tema2---PC/Task2.c:29:42: warning: 90 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-        } else if (S[i] >= 65 && S[i] <= 90) {
-                                         ^
-/home/student/Desktop/Tema2---PC/Task2.c:30:26: warning: 65 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-            leftMargin = 65; rightMargin = 90;
-                         ^
-/home/student/Desktop/Tema2---PC/Task2.c:30:44: warning: 90 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-            leftMargin = 65; rightMargin = 90;
-                                           ^
-/home/student/Desktop/Tema2---PC/Task2.c:33:28: warning: 97 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-        } else if (S[i] >= 97 && S[i] <= 122) {
-                           ^
-/home/student/Desktop/Tema2---PC/Task2.c:33:42: warning: 122 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-        } else if (S[i] >= 97 && S[i] <= 122) {
-                                         ^
-/home/student/Desktop/Tema2---PC/Task2.c:34:26: warning: 97 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-            leftMargin = 97; rightMargin = 122;
-                         ^
-/home/student/Desktop/Tema2---PC/Task2.c:34:44: warning: 122 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-            leftMargin = 97; rightMargin = 122;
-                                           ^
-/home/student/Desktop/Tema2---PC/Task2.c:45:9: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task2.c:115:9: warning: variable 'i' is not initialized [cppcoreguidelines-init-variables]
     int i, j = 0, leftMargin, rightMargin;
         ^
           = 0
-/home/student/Desktop/Tema2---PC/Task2.c:45:19: warning: variable 'leftMargin' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task2.c:115:19: warning: variable 'leftMargin' is not initialized [cppcoreguidelines-init-variables]
     int i, j = 0, leftMargin, rightMargin;
                   ^
                              = 0
-/home/student/Desktop/Tema2---PC/Task2.c:45:31: warning: variable 'rightMargin' is not initialized [cppcoreguidelines-init-variables]
+/home/student/Desktop/Tema2---PC/Task2.c:115:31: warning: variable 'rightMargin' is not initialized [cppcoreguidelines-init-variables]
     int i, j = 0, leftMargin, rightMargin;
                               ^
                                           = 0
-/home/student/Desktop/Tema2---PC/Task2.c:50:21: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-        if (S[i] >= 48 && S[i] <= 57) {
-                    ^
-/home/student/Desktop/Tema2---PC/Task2.c:50:35: warning: 57 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-        if (S[i] >= 48 && S[i] <= 57) {
-                                  ^
-/home/student/Desktop/Tema2---PC/Task2.c:51:26: warning: 48 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-            leftMargin = 48; rightMargin = 57;
-                         ^
-/home/student/Desktop/Tema2---PC/Task2.c:51:44: warning: 57 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-            leftMargin = 48; rightMargin = 57;
-                                           ^
-/home/student/Desktop/Tema2---PC/Task2.c:54:28: warning: 65 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-        } else if (S[i] >= 65 && S[i] <= 90) {
-                           ^
-/home/student/Desktop/Tema2---PC/Task2.c:54:42: warning: 90 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-        } else if (S[i] >= 65 && S[i] <= 90) {
-                                         ^
-/home/student/Desktop/Tema2---PC/Task2.c:55:26: warning: 65 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-            leftMargin = 65; rightMargin = 90;
-                         ^
-/home/student/Desktop/Tema2---PC/Task2.c:55:44: warning: 90 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-            leftMargin = 65; rightMargin = 90;
-                                           ^
-/home/student/Desktop/Tema2---PC/Task2.c:58:28: warning: 97 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-        } else if (S[i] >= 97 && S[i] <= 122) {
-                           ^
-/home/student/Desktop/Tema2---PC/Task2.c:58:42: warning: 122 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-        } else if (S[i] >= 97 && S[i] <= 122) {
-                                         ^
-/home/student/Desktop/Tema2---PC/Task2.c:59:26: warning: 97 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-            leftMargin = 97; rightMargin = 122;
-                         ^
-/home/student/Desktop/Tema2---PC/Task2.c:59:44: warning: 122 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-            leftMargin = 97; rightMargin = 122;
-                                           ^
-/home/student/Desktop/Tema2---PC/Task2.c:62:71: warning: 65 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-        S[i] = rotate(S[i], leftMargin, rightMargin, extendedKey[i] - 65);
-                                                                      ^
-/home/student/Desktop/Tema2---PC/Task2.c:69:47: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
-    char S[MAX_LENGTH], K[MAX_LENGTH], method[10], extendedKey[MAX_LENGTH];
-                                              ^
 Suppressed 56 warnings (56 in non-user code).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

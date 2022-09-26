@@ -1,6 +1,6 @@
 #include "utils.h"
 
-/* Function to determine if a number is palindrome */
+/* Function used to determine if a number is palindrome */
 int isPalindrome(int n) {
     int aux, reverese = 0;
 
@@ -17,7 +17,7 @@ int isPalindrome(int n) {
     return 0;
 }
 
-/* Function to determine if a number is prime */
+/* Function used to determine if a number is prime */
 int isPrime(int n) {
     for (int i = 2; i < n; i++) {
         if (n % i == 0) {
@@ -28,9 +28,8 @@ int isPrime(int n) {
     return 1;
 }
 
-/* Function to solve "a" strating words */
-void solveA(char *p, int mat[MAX_LENGTH][MAX_LENGTH],
-            int *i, int *j, int *moveNr) {
+/* Function used to solve "a" strating words */
+void solveA(char *p, int mat[MAX_LENGTH][MAX_LENGTH], int *i, int *j, int *moveNr) {
     int k, idx;
     char max = '0';
 
@@ -65,9 +64,8 @@ void solveA(char *p, int mat[MAX_LENGTH][MAX_LENGTH],
     return;
 }
 
-/* Function to solve "b" strating words */
-void solveB(char *p, int mat[MAX_LENGTH][MAX_LENGTH],
-            int *i, int *j, int *moveNr) {
+/* Function used to solve "b" strating words */
+void solveB(char *p, int mat[MAX_LENGTH][MAX_LENGTH], int *i, int *j, int *moveNr) {
     int K, X;
 
     K = atoi(p + 1);
@@ -89,9 +87,8 @@ void solveB(char *p, int mat[MAX_LENGTH][MAX_LENGTH],
     return;
 }
 
-/* Function to solve "c" strating words */
-void solveC(char *p, int mat[MAX_LENGTH][MAX_LENGTH],
-            int *i, int *j, int *moveNr) {
+/* Function used to solve "c" strating words */
+void solveC(char *p, int mat[MAX_LENGTH][MAX_LENGTH], int *i, int *j, int *moveNr) {
     int nr, idx = 0, n, k, S = 0, r;
 
     n = p[1] - 48;
@@ -140,7 +137,7 @@ void SolveTask1() {
     scanf("%d %d\n", &N, &M);
     scanf("%[^\n]s", words);
 
-    /* divide input into words */
+    /* Divide input into words */
     p = strtok(words, " ");
     while (p != NULL) {
         if (p[0] == 'a') {
